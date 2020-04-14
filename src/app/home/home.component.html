@@ -1,0 +1,82 @@
+<form [formGroup]="covidForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Enter Data of the Region to Estimate</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Region Name</mat-label>
+            <input matInput placeholder="E.g Africa" data-region-name="" formControlName="regionName">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Average Age</mat-label>
+            <input matInput placeholder="E.g 19.7" data-avg-age="" formControlName="avgAge">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Average Daily Income in USD</mat-label>
+            <input matInput placeholder="E.g 5" data-avg-daily-income-usd="" formControlName="avgDailyIncomeInUSD">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Average Daily Income Population</mat-label>
+            <input matInput placeholder="E.g 0.71" data-avg-daily-income-population="" formControlName="avgDailyIncomePopulation">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Period Type</mat-label>
+            <mat-select placeholder="E.g. Days" data-period-type="" formControlName="periodType">
+              <mat-option *ngFor="let period of periods" [value]="period.value">
+                {{ period.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Time to Elapse</mat-label>
+            <input matInput placeholder="E.g 58" data-time-to-elapse="" formControlName="timeToElapse">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>No. of Reported Cases</mat-label>
+            <input matInput placeholder="E.g. 674" data-reported-cases="" formControlName="reportedCases">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Population</mat-label>
+            <input matInput placeholder="E.g. 66622705" data-population="" formControlName="population">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Total No. of Available Hospital Beds</mat-label>
+            <input matInput placeholder="E.g 1380614" data-total-hospital-beds="" formControlName="totalHospitalBeds">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" data-go-estimate="">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
