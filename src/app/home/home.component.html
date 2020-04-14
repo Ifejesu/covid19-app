@@ -38,8 +38,8 @@
         <div class="col">
           <mat-form-field class="full-width">
             <mat-label>Period Type</mat-label>
-            <mat-select placeholder="E.g. Days" data-period-type="" formControlName="periodType">
-              <mat-option *ngFor="let period of periods" role="list" [value]="period.value">
+            <mat-select placeholder="E.g. Days" role="listbox" data-period-type="" formControlName="periodType">
+              <mat-option *ngFor="let period of periods" role="option" aria-selected="true" [value]="period.value">
                 {{ period.name }}
               </mat-option>
             </mat-select>

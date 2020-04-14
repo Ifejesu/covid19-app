@@ -20,9 +20,9 @@ export class HomeComponent {
   });
 
   periods = [
-    { name: 'Days', value: 'days' },
-    { name: 'Weeks', value: 'weeks' },
-    { name: 'Months', value: 'months' }
+    { name: 'Days', value: 'days', selected:true },
+    { name: 'Weeks', value: 'weeks', selected:false },
+    { name: 'Months', value: 'months', selected:false }
   ];
 
   constructor(private fb: FormBuilder) {}
