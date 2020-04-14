@@ -19,12 +19,6 @@ export class HomeComponent {
     totalHospitalBeds: [null, Validators.required]
   });
 
-  periods = [
-    { name: 'Days', value: 'days', selected:true },
-    { name: 'Weeks', value: 'weeks', selected:false },
-    { name: 'Months', value: 'months', selected:false }
-  ];
-
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {

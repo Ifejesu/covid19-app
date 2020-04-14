@@ -38,11 +38,11 @@
         <div class="col">
           <mat-form-field class="full-width">
             <mat-label>Period Type</mat-label>
-            <mat-select placeholder="E.g. Days" role="" data-period-type="" formControlName="periodType">
-              <mat-option *ngFor="let period of periods" role="" aria-selected="true" [value]="period.value">
-                {{ period.name }}
-              </mat-option>
-            </mat-select>
+            <select matNativeControl placeholder="E.g. Days" data-period-type="" formControlName="periodType">
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+            </select>
           </mat-form-field>
         </div>
         <div class="col">
